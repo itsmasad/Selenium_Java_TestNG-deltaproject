@@ -4,40 +4,65 @@ package eurosoft.com;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.Assert;
+import deltapages.delta;
+
 import io.github.bonigarcia.wdm.WebDriverManager;
-/**
- * Hello world!
- */
+
+
+
+
+
 public final class App {
-    public static void main(String[] args) {
+  private static WebDriver driver = null;
+    public static void main(String[] args) throws InterruptedException {
         
-        // WebDriver driver =
         WebDriverManager.chromedriver().setup();
- 
-         WebDriver driver = new ChromeDriver();
-
-
+        driver = new ChromeDriver();
 
 
           //Maximize The Window
         driver.manage().window().maximize();
 
-        // Navigating to Url
-        driver.get("https://cabtreasurecloud5.com/Delta_Demo/Authentication/Index");
-
-        // Login 
-        driver.findElement(By.xpath("//*[@id='UserName']")).sendKeys("khawar@eurosofttech.co.uk");
-        driver.findElement(By.xpath("//*[@id='Password']")).sendKeys("CD5S1wSKASV#Umc");
-        driver.findElement(By.xpath("//*[@id='btnLogin']")).click();
-
-        System.out.println(driver.getTitle());
+      // Navigating to Url
+      driver.get("https://cabtreasurecloud5.com/Delta_Demo/Authentication/Index");
 
 
+      // login to page via POM model
+      delta.login_textbox_username(driver).sendKeys("khawar@eurosofttech.co.uk");
+      delta.login_textbox_password(driver).sendKeys("CD5S1wSKASV#Umc");
+      delta.login_button_login(driver).click();
+      System.out.println(driver.getTitle());
 
 
-        
+      // Navigating to the Add Reservation page
+      Thread.sleep(5000);
 
-        // driver.quit();
+      delta.nav_reservation(driver).click();
+      delta.nav_addreservation(driver).click();
+
+      Boolean condition;
+ 
+      // switching to iframe
+      driver.switchTo().frame("iFrameTab_0");
+      
+      if(driver.findElements(By.xpath("//*[@id='stageDate']")).size()>0){
+          // Add the if code here
+          condition = true;
+
+        }
+        else{
+          condition = false;
+    
+        }
+
+        System.out.println(condition);
+      
+        Assert.assertEquals(condition, true);
+
+      
+
+      driver.quit();
  
      }   
 
