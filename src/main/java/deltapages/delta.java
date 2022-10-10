@@ -6,9 +6,13 @@ import org.openqa.selenium.WebElement;
 
 public class delta {
 
+    String email = "khawar@eurosofttech.co.uk";
+
     // ***Login page***
     
     private static WebElement element = null;
+
+   
 
     // Username
     public static WebElement login_textbox_username(WebDriver driver){

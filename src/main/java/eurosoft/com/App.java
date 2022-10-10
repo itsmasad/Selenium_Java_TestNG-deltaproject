@@ -29,7 +29,7 @@ public final class App {
 
 
       // login to page via POM model
-      delta.login_textbox_username(driver).sendKeys("khawar@eurosofttech.co.uk");
+      delta.login_textbox_username(driver).sendKeys(delta.email);
       delta.login_textbox_password(driver).sendKeys("CD5S1wSKASV#Umc");
       delta.login_button_login(driver).click();
       System.out.println(driver.getTitle());
