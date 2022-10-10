@@ -1,28 +1,23 @@
 package eurosoft.com;
 
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.Assert;
 import deltapages.delta;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
-
-
-
 
 
 public final class App {
   private static WebDriver driver = null;
     public static void main(String[] args) throws InterruptedException {
         
-        WebDriverManager.chromedriver().setup();
-        driver = new ChromeDriver();
+      WebDriverManager.chromedriver().setup();
+      driver = new ChromeDriver();
 
 
-          //Maximize The Window
-        driver.manage().window().maximize();
+      //Maximize The Window
+      driver.manage().window().maximize();
 
       // Navigating to Url
       driver.get("https://cabtreasurecloud5.com/Delta_Demo/Authentication/Index");
