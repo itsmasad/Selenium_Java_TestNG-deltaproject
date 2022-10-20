@@ -11,8 +11,6 @@ import io.github.bonigarcia.wdm.WebDriverManager;
 
 
 
-
-
 public final class App {
   private static WebDriver driver = null;
     public static void main(String[] args) throws InterruptedException {
@@ -62,7 +60,7 @@ public final class App {
 
       
 
-      driver.quit();
+      // driver.quit();
  
      }   
 
