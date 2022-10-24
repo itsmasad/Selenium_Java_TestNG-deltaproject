@@ -6,7 +6,12 @@ import org.openqa.selenium.WebElement;
 
 public class delta {
 
-    public static String email = "khawar@eurosofttech.co.uk";
+// <<<<<<< HEAD
+//     public static String email = "khawar@eurosofttech.co.uk";
+
+    public static String valid_email = "khawar@eurosofttech.co.uk";
+    public static String valid_password = "CD5S1wSKASV#Umc";
+
 
     // ***Login page***
     
