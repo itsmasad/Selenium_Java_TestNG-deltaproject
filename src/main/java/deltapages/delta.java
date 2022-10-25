@@ -9,10 +9,13 @@ public class delta {
 // <<<<<<< HEAD
 //     public static String email = "khawar@eurosofttech.co.uk";
 
-    public static String valid_email = "khawar@eurosofttech.co.uk";
-    public static String valid_password = "CD5S1wSKASV#Umc";
+    // public static String valid_email = "khawar@eurosofttech.co.uk";
+    // public static String valid_password = "CD5S1wSKASV#Umc";
 
-
+    public static String valid_email = "demo@eurosofttech.co.uk";
+    public static String valid_password = "123123";
+    public static String Delta_demo = "https://cabtreasurecloud5.com/Delta_Demo/Authentication/Index";
+    public static String Delta_Azure = "https://deltaclient.azurewebsites.net/Dashboard/Index";
     // ***Login page***
     
     private static WebElement element = null;
