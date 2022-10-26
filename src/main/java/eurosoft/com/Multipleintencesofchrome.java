@@ -5,7 +5,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import deltapages.delta;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public final class ReservationIDE {
+public final class Multipleintencesofchrome {
   // private static WebDriver driver = null;
   public static void main(String[] args) throws InterruptedException {
 
