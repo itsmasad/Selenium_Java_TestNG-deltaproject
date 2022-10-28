@@ -22,7 +22,7 @@ public final class AddReservation {
     driver.manage().window().maximize();
 
     // Navigating to Url
-    driver.get(delta.Delta_demo);
+    driver.get(delta.Delta_Azure);
     // driver.get(delta.Delta_Azure);
 
     // login to page via POM model
