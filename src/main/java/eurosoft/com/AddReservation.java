@@ -42,7 +42,7 @@ public final class AddReservation {
     // switching to iframe
     driver.switchTo().frame("iFrameTab_0");
 
-    driver.findElement(By.xpath("//*[@id='stageDate']")).sendKeys("10/20/2022");
+    driver.findElement(By.xpath("//*[@id='stageDate']")).sendKeys("11/01/2022");
     Thread.sleep(1000);
     driver
         .findElement(
@@ -77,34 +77,37 @@ public final class AddReservation {
     driver.findElement(By.id("PassengerName")).sendKeys("asdfasdf");
     Thread.sleep(1000);
 
-    driver.findElement(By.id("PNRNo")).sendKeys("asdfasdf");
+    driver.findElement(By.id("PNRNo")).sendKeys("asdfdjassdf");
     // Thread.sleep(1000);
     // driver.findElement(By.xpath("//*[@id='ddlServiceType']")).click();
     Thread.sleep(1000);
 
     driver.findElement(By.xpath("//*[@id='btnAddMeeting']")).click();
     Thread.sleep(2000);
-    for (int i = 0; i < 100; i++) {
-      driver.findElement(By.xpath("//*[@id='stageDate']")).sendKeys("10/20/2022");
-      Thread.sleep(2000);
-      driver
-          .findElement(By
-              .xpath("//*[@id='frmAddReservation']/div[2]/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/span/span"))
-          .click();
-      Thread.sleep(2000);
-      driver.findElement(By.xpath("//*[@id='ddlAirportLocation_listbox']/li[5]")).click();
-      Thread.sleep(1000);
-      driver.findElement(By.xpath("//*[@id='ddlBookingType']")).sendKeys("Ar");
-      Thread.sleep(1000);
-      driver.findElement(By.xpath("//*[@id='stageTime']")).click();
-      Thread.sleep(1000);
-      driver.findElement(By.xpath("//*[@id='stageTime']")).sendKeys("02:30");
-      Thread.sleep(1000);
 
-      driver.findElement(By.xpath("//*[@id='btnAddMeeting']")).click();
-      Thread.sleep(3000);
+    // Loop for 100 or multiple reservations
 
-    }
+    // for (int i = 0; i < 100; i++) {
+    //   driver.findElement(By.xpath("//*[@id='stageDate']")).sendKeys("10/20/2022");
+    //   Thread.sleep(2000);
+    //   driver
+    //       .findElement(By
+    //           .xpath("//*[@id='frmAddReservation']/div[2]/div[1]/div/div[1]/div[2]/div[1]/div/div[2]/div[2]/span/span"))
+    //       .click();
+    //   Thread.sleep(2000);
+    //   driver.findElement(By.xpath("//*[@id='ddlAirportLocation_listbox']/li[5]")).click();
+    //   Thread.sleep(1000);
+    //   driver.findElement(By.xpath("//*[@id='ddlBookingType']")).sendKeys("Ar");
+    //   Thread.sleep(1000);
+    //   driver.findElement(By.xpath("//*[@id='stageTime']")).click();
+    //   Thread.sleep(1000);
+    //   driver.findElement(By.xpath("//*[@id='stageTime']")).sendKeys("02:30");
+    //   Thread.sleep(1000);
+
+    //   driver.findElement(By.xpath("//*[@id='btnAddMeeting']")).click();
+    //   Thread.sleep(3000);
+
+    // }
     Thread.sleep(5000);
     driver.findElement(By.xpath("//*[@id='btnAddReservation']")).click();
 
