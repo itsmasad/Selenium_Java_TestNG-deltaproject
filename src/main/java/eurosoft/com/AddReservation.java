@@ -22,7 +22,7 @@ public final class AddReservation {
     driver.manage().window().maximize();
 
     // Navigating to Url
-    driver.get(delta.Delta_Azure);
+    driver.get(delta.Delta_demo);
     // driver.get(delta.Delta_Azure);
 
     // login to page via POM model
@@ -42,7 +42,7 @@ public final class AddReservation {
     // switching to iframe
     driver.switchTo().frame("iFrameTab_0");
 
-    driver.findElement(By.xpath("//*[@id='stageDate']")).sendKeys("11/01/2022");
+    driver.findElement(By.xpath("//*[@id='stageDate']")).sendKeys("11/02/2022");
     Thread.sleep(1000);
     driver
         .findElement(
@@ -50,13 +50,17 @@ public final class AddReservation {
         .click();
 
     Thread.sleep(1000);
-    driver.findElement(By.xpath("//*[@id='ddlAirportLocation_listbox']/li[5]")).click();
+    driver.findElement(By.xpath("//*[@id='ddlAirportLocation_listbox']/li[2]")).click();
     Thread.sleep(1000);
-    driver.findElement(By.xpath("//*[@id='ddlBookingType']")).sendKeys("Ar");
+    driver.findElement(By.xpath("//*[@id='ddlBookingType']")).sendKeys("con");
     Thread.sleep(1000);
     // driver.findElement(By.xpath("//*[@id='stageTime']")).click();
     Thread.sleep(1000);
-    driver.findElement(By.xpath("//*[@id='stageTime']")).sendKeys("02:30");
+    driver.findElement(By.xpath("//*[@id='ArrivalTime']")).sendKeys("09:30");
+    Thread.sleep(1000);
+    driver.findElement(By.xpath("//*[@id='ArrivalFlightNo']")).sendKeys("adsf");
+    // Thread.sleep(1000);
+    // driver.findElement(By.xpath("//*[@id='stageTime']")).sendKeys("10:00");
 
     Thread.sleep(1000);
     driver.findElement(By.xpath("//*[@id='ddlServiceType']")).sendKeys("vip");
@@ -109,7 +113,7 @@ public final class AddReservation {
 
     // }
     Thread.sleep(5000);
-    driver.findElement(By.xpath("//*[@id='btnAddReservation']")).click();
+    // driver.findElement(By.xpath("//*[@id='btnAddReservation']")).click();
 
     // driver.quit();
 
